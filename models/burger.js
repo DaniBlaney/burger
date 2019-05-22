@@ -20,3 +20,12 @@ var burger =
       callback(res);
     });
   },
+  updateOne: function(burger_id, callback)
+  {
+    orm.updateOne(burger_id, function(res)
+    {
+      callback(res);
+    });
+  }
+
+};
