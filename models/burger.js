@@ -20,9 +20,9 @@ var burger =
       callback(res);
     });
   },
-  updateOne: function(burger_id, callback)
+  updateOne: function(id, callback)
   {
-    orm.updateOne(burger_id, function(res)
+    orm.updateOne(id, function(res)
     {
       callback(res);
     });
