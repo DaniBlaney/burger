@@ -1,7 +1,7 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Uses Node and MySQL to query and route data in your app, and Handlebars to generate HTML.",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.0",
@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

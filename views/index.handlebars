@@ -34,17 +34,10 @@
         <div class="card-body">
               {{#each burgers}}
                 {{#unless devoured}}
-                  {{> burgers/burger-block devour=false}}
+                  {{> partials/burger-order devour=false}}
                 {{/unless}}
               {{/each}}
         </div>
-      </div>
-      <div class="mt-4">
-        <h4>{{burger_name}}</h4>
-        <!--Devour me button-->
-        <button class="change-devour btn btn-primary" data-id="{{id}}" data-newdevour="{{devour}}">
-          <img src="/assets/img/devour.png" width="25px height=25px" class="mr-2"> Devour me
-        </button>
       </div>
     </div>
 
@@ -57,16 +50,10 @@
         <div class="card-body">
           {{#each burgers}}
               {{#if devoured}}
-                {{> burgers/burger-devoured devour=true}}
+                {{> partials/burger-devoured devour=true}}
               {{/if}}
           {{/each}}
         </div>
       </div>
     </div>
-      <div class="mt-4">
-        <h4 class="devoured-burger-name">{{burger_name}}</h4>
-
-         <!--Throw away burger button-->
-        <button class="delete-burger btn btn-primary" data-id="{{this.id}}"><i class="far fa-trash-alt"></i> Throw away</button>
-      </div>
   </div>
