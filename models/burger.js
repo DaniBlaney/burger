@@ -30,8 +30,6 @@ var burger =
 
 };
 
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(function() {
   //Click event for adding a burger.
   $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
@@ -94,7 +92,7 @@ $(function() {
         }
       );
     });
-});
+
 
 
 // Export at the end of the burger.js file.
