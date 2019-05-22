@@ -1,0 +1,22 @@
+/* Burger background image*/
+body {
+  background-image: url("/assets/img/limegreen.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lead {
+  font-size: 24px;
+}
+
+#burgerOrder {
+  background-color: yellow
+}
+
+#devoured-card-header  {
+  background-color: yellow;
+}
+
+.devoured-burger-name {
+  color: yellow;
+}

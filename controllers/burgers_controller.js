@@ -12,31 +12,32 @@ router.get('/', function (req, res)
 });
 
 // Index Page
-router.get('/index', function (req, res)
+router.get('/', function (req, res)
 {
   burger.selectAll(function(data)
   {
     var handlebarsObject = { burgers: data };
-    //console.log(hbsObject);
+    console.log(hbsObject);
     res.render('index', handlebarsObject);
   });
 });
 
 // Create a New Burger
-router.post('/burger/create', function (req, res)
+router.post('/api/burgers', function (req, res)
 {
-  burger.insertOne(req.body.burger_name, function()
+  burger.insertOne([req.body.burger_name, req.body.devoured],
+    function(result)
   {
     res.redirect('/');
   });
 });
 
 // Devour a Burger
-router.post('/burger/eat/:id', function (req, res)
+router.post('/api/burgers/:id', function (req, res)
 {
   burger.updateOne(req.params.id, function()
   {
-    res.redirect('/index');
+    res.redirect('/');
   });
 });
 
