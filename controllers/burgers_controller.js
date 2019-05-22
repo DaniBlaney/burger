@@ -12,12 +12,12 @@ router.get('/', function (req, res)
 });
 
 // Index Page
-router.get('/', function (req, res)
+router.get('/index', function (req, res)
 {
   burger.selectAll(function(data)
   {
     var handlebarsObject = { burgers: data };
-    console.log(hbsObject);
+    console.log(handlebarsObject);
     res.render('index', handlebarsObject);
   });
 });
