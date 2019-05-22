@@ -2,6 +2,8 @@
 
 A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Uses Node and MySQL to query and route data in your app, and Handlebars to generate HTML.
 
+https://bobzburgers.herokuapp.com/
+
 ## How it works:
 
 * Bob's Burgers! is an app that lets users input the names of burgers they'd like to eat.
