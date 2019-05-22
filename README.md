@@ -4,7 +4,7 @@ A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!).
 
 ## How it works:
 
-* Eat-Da-Burger! is an app that lets users input the names of burgers they'd like to eat.
+* Bob's Burgers! is an app that lets users input the names of burgers they'd like to eat.
 
 * Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be devoured.
 
