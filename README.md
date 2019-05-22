@@ -10,6 +10,6 @@ A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!).
 
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
-* From there the burger can be `Thrown away` and deleted.
+* From there the burger can be `Throw away` and deleted.
 
 * The app will store every burger in a database, whether devoured or not.
