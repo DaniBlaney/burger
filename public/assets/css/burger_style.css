@@ -5,18 +5,23 @@ body {
   background-size: cover;
 }
 
-.lead {
-  font-size: 24px;
-}
-
-#burgerOrder {
-  background-color: yellow
-}
+/* #burgerOrder {
+  background-color: red;
+} */
 
 #devoured-card-header  {
-  background-color: yellow;
+  background-color: #D9230F;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.lead {
+  font-size: 24px;
+  color:  #D9230F;
 }
 
 .devoured-burger-name {
-  color: yellow;
+  color:  #D9230F;
 }
