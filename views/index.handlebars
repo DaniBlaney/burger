@@ -34,7 +34,7 @@
         <div class="card-body">
               {{#each burgers}}
                 {{#unless devoured}}
-                  {{> burgers/burger-block devour=false}}
+                  {{> burger-block devour=false}}
                 {{/unless}}
               {{/each}}
         </div>
@@ -50,7 +50,7 @@
         <div class="card-body">
           {{#each burgers}}
               {{#if devoured}}
-                {{> burgers/burger-devoured devour=true}}
+                {{> burger-devoured devour=true}}
               {{/if}}
           {{/each}}
         </div>
