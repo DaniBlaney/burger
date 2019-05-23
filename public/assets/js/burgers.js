@@ -4,7 +4,6 @@ $(function() {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
 
-      //Grab burger name from form field.
       //When user submits burger name, set devoured state to false.
       var newBurger = {
       burger_name: $("#burgerOrder").val().trim(),
