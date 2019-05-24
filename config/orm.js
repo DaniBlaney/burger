@@ -5,23 +5,25 @@ var orm = {
 
 	//selectAll()
 
-	selectAll: function(callback)
-	{
+	all: function(table_name, callback){
 		//mySQL Query
-		connection.query('SELECT * FROM burgers', function(err, result)
+    connection.query('SELECT * FROM ' + table_name,
+    function(err, result)
 		{
 			if (err) throw err;
-			callback(result);
+      // console.log(result);
+      callback(result);
 		});
 	},
 
 	//insertOne()
-	insertOne: function(burger_name, callback)
-	{
-		connection.query('INSERT INTO burgers SET ?',
+	create: function(burger_name, callback){
+		connection.query(
+      'INSERT INTO burgers SET ?',
 			{	burger_name: burger_name,
 				devoured: false,
-			}, function(err, result)
+      },
+      function(err, result)
 			{
 				if (err) throw err;
 				callback(result);
@@ -30,15 +32,24 @@ var orm = {
 	},
 
 	//updateOne()
-	updateOne: function(burgerID, callback)
-	{
-		connection.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {id: burgerID}],
+	update: function(burgerID, callback){
+		connection.query(
+      'UPDATE burgers SET ? WHERE ?',
+      [{devoured: true}, {id: burgerID}],
 			function(err, result)
 			{
 				if (err) throw err;
 				callback(result);
 			});
-	}
+  },
+  delete: function(burgerID, callback){
+    connection.query(
+      'DELETE FROM burgers WHERE id = '+burgerID,
+      function(err, result){
+        if (err) throw err;
+        callback(result);
+      });
+  },
 };
 
 
