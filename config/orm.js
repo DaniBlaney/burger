@@ -17,7 +17,7 @@ var orm = {
 	},
 
 	//insertOne()
-	create: function(burger_name, callback){
+	create: function(burger_name, devoured, callback){
 		connection.query(
       'INSERT INTO burgers SET ?',
 			{	burger_name: burger_name,
@@ -32,14 +32,14 @@ var orm = {
 	},
 
 	//updateOne()
-	update: function(burgerID, callback){
-		connection.query(
+	update: function(devoured, burgerID, callback){
+   	connection.query(
       'UPDATE burgers SET ? WHERE ?',
       [{devoured: true}, {id: burgerID}],
 			function(err, result)
 			{
-				if (err) throw err;
-				callback(result);
+        if (err) throw err;
+   			callback(result);
 			});
   },
   delete: function(burgerID, callback){

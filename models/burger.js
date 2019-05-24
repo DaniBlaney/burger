@@ -17,9 +17,11 @@ var burger = {
       callback(res);
     });
   },
-  update: function(id, callback){
-    orm.update(id, function(res)
+  update: function(devoured,burgerID, callback){
+    orm.update(devoured, burgerID, function(res)
     {
+      console.log("From burger.js");
+      console.log(res);
       callback(res);
     });
   },
