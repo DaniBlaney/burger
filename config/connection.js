@@ -1,6 +1,8 @@
 //Require mysql npm package to create a connection to the mysql database.
 var mysql = require("mysql");
 
+//Read and set any environment variables with the dotenv package.
+require("dotenv").config();
 //Define database connection properties (host, user, password, and database name)
 //Use production database when deployed.
 if (process.env.JAWSDB_URL) {
