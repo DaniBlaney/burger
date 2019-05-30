@@ -1,6 +1,6 @@
 //Require mysql npm package to create a connection to the mysql database.
 var mysql = require("mysql");
-
+var connection;
 //Read and set any environment variables with the dotenv package.
 require("dotenv").config();
 //Define database connection properties (host, user, password, and database name)
@@ -31,4 +31,5 @@ connection.connect(function(err) {
 });
 
 //Export the connection properties so that we can use them in other files.
+connection.connect();
 module.exports = connection;
