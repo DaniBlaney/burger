@@ -15,3 +15,7 @@ https://bobzburgers.herokuapp.com/
 * From there the burger can be `Throw away` and deleted.
 
 * The app will store every burger in a database, whether devoured or not.
+
+<kbd>
+  <img src="public/assets/img/bobs.png">
+</kbd>
