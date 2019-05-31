@@ -31,5 +31,4 @@ connection.connect(function(err) {
 });
 
 //Export the connection properties so that we can use them in other files.
-connection.connect();
 module.exports = connection;
